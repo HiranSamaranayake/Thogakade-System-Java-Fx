@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="454.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.order.OrderFormController">
+    <children>
+        <JFXTextField fx:id="txtOrderId" layoutX="95.0" layoutY="106.0" prefHeight="36.0" prefWidth="168.0" promptText="Item Code" text="OrderId" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#192a56" height="69.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="712.0" />
+        <Label layoutX="291.0" layoutY="16.0" text="Order Form" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblOrder" layoutX="70.0" layoutY="237.0" prefHeight="196.0" prefWidth="578.0">
+            <columns>
+                <TableColumn fx:id="colOrderId" prefWidth="196.800048828125" text="OrderId" />
+                <TableColumn fx:id="colOrderDate" prefWidth="210.39996337890625" text="OrderDate" />
+                <TableColumn fx:id="colCustId" prefWidth="172.00006103515625" text="CustId" />
+            </columns>
+        </TableView>
+        <JFXTextField fx:id="txtCustId" layoutX="291.0" layoutY="106.0" prefHeight="36.0" prefWidth="177.0" promptText="Pack Size" text="CustId" />
+        <JFXButton layoutX="438.0" layoutY="180.0" onAction="#btnAddOnAction" style="-fx-background-color: #4cd137;" text="Add" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="365.0" layoutY="180.0" onAction="#btnUpdateOnAction" style="-fx-background-color: #487eb0;" text="Update" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="301.0" layoutY="180.0" onAction="#btnDeleteOnAction" style="-fx-background-color: #e84118;" text="Delete" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="234.0" layoutY="180.0" onAction="#btnSearchOnAction" style="-fx-background-color: #7f8fa6;" text="Search" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </JFXButton>
+      <DatePicker fx:id="dateOrderDate" layoutX="482.0" layoutY="112.0" prefHeight="36.0" prefWidth="198.0" promptText="OrderDate" />
+    </children>
+</AnchorPane>
